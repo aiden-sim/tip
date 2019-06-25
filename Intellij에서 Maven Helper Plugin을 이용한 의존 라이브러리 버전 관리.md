@@ -44,7 +44,7 @@ Repositories**에서 **Maven Helper** 검색 후 설치하시면 됩니다.
 
 **다운로드**) <https://plugins.jetbrains.com/plugin/7179-maven-helper/versions>
 
-![img/mavenhelper/b0be9512565690b4f9a7897c0dada2c6](media/122f879b714edcc6ff5bf3377f287117.tmp)
+![img/mavenhelper/b0be9512565690b4f9a7897c0dada2c6](img/mavenhelper/122f879b714edcc6ff5bf3377f287117.tmp)
 
 **2) 실 행**
 
@@ -54,7 +54,7 @@ Repositories**에서 **Maven Helper** 검색 후 설치하시면 됩니다.
 Text는 기존 pom.xml 창과 동일하며 **Dependency Analyzer**에서 실제로 의존
 라이브러리들의 버전 확인 및 관리를 할 수 있습니다.
 
-![img/mavenhelper/81c4f3831617494c35bad39a7f2681bc](media/08a150dc74b4d440387469077c0780f3.tmp)
+![img/mavenhelper/81c4f3831617494c35bad39a7f2681bc](img/mavenhelper/08a150dc74b4d440387469077c0780f3.tmp)
 
 **3) 기 능**
 
@@ -64,7 +64,7 @@ Text는 기존 pom.xml 창과 동일하며 **Dependency Analyzer**에서 실제�
 (참고로 우측 창에 현재 사용하고 있는 버전은 하얀색으로 나오고 사용되지 않고 있는
 버전은 빨간색으로 나옵니다.)
 
-![img/mavenhelper/5c9903e505143ec15cc811e1dc1a7e27](media/275c16dc90c4f8125843eae5300e0d41.tmp)
+![img/mavenhelper/5c9903e505143ec15cc811e1dc1a7e27](img/mavenhelper/275c16dc90c4f8125843eae5300e0d41.tmp)
 
 **Exclude**를 사용하면 실제 pom.xml에 자동으로 exclusion 태그가 추가돼서 해당
 라이브러리 제외됩니다.
@@ -96,18 +96,18 @@ Text는 기존 pom.xml 창과 동일하며 **Dependency Analyzer**에서 실제�
 한 가지 단점으로는 Plugin 화면이 자동으로 **Refresh**가 되지 않기 때문에
 수동으로 처리해야 됩니다.
 
-![img/mavenhelper/71f7a0c0b5cf9ca33bc339af5e2fcb54](media/b56fd7667d81c2626ecfdf65737f925b.tmp)
+![img/mavenhelper/71f7a0c0b5cf9ca33bc339af5e2fcb54](img/mavenhelper/b56fd7667d81c2626ecfdf65737f925b.tmp)
 
 **4) 사용사례**
 
 logback에 kafka appender를 추가 후, 기동을 하다가 다음과
 같이 **NoClassDefFoundError**  에러가 발생했습니다.
 
-![img/mavenhelper/f4c868a7b5e82c3f132e0909b6a41214](media/180ed38c8a0c837ee936966386cfec87.tmp)
+![img/mavenhelper/f4c868a7b5e82c3f132e0909b6a41214](img/mavenhelper/180ed38c8a0c837ee936966386cfec87.tmp)
 
 Maven Helper Plugin을 통해 충돌된 라이브러리의 패키지를 검색해보았습니다.
 
-![img/mavenhelper/e7537943adb765b2f2f539a42e89e7d5](media/410624f0a3fd0b4732859ed774623e50.tmp)
+![img/mavenhelper/e7537943adb765b2f2f539a42e89e7d5](img/mavenhelper/410624f0a3fd0b4732859ed774623e50.tmp)
 
 해당 라이브러리를 의존하고 있는 곳은 3곳이었고 pom.xml에 kafka appender와 같이
 추가한 logstash-logback-encoder 라이브러리에서
@@ -121,7 +121,7 @@ Maven Helper Plugin을 통해 충돌된 라이브러리의 패키지를 검색�
 충돌이 나는 **logback-core 1.1.3** 버전에 대해서 **Exclude** 시켰고 이후
 정상적으로 기동되었습니다.
 
-![img/mavenhelper/5cc038992683a451386036495b8095ab](media/2eb8cf2941cb4e41cf92c1c41223e556.tmp)
+![img/mavenhelper/5cc038992683a451386036495b8095ab](img/mavenhelper/2eb8cf2941cb4e41cf92c1c41223e556.tmp)
 
 사용 사례와 같이 Maven Helper Plugin를 사용하면 의존 라이브러리 버전 관리를
 손쉽게 할 수 있습니다.
