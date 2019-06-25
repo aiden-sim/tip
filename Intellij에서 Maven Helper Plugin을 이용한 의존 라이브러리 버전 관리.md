@@ -1,13 +1,13 @@
-Intellij에서 Maven Helper Plugin을 이용한 의존 라이브러리 버전 관리
-===================================================================
+## Intellij에서 Maven Helper Plugin을 이용한 의존 라이브러리 버전 관리
 
-예전에 Visual Studio에서 라이브러리들을 관리해 주는 nuget 이란 프로그램을 사용한
-적이 있었는데 매우 편리했던 기억이 있습니다.
+
+예전에 Visual Studio에서 라이브러리들을 관리해 주는 nuget 이란 프로그램을 사용한 적이 있었는데 매우 편리했던 기억이 있습니다.
 
 그래서 **Intellij**에서도 좀 더 편하게 라이브러리들을 관리하는 방법이 없을까
 해서 찾아보았습니다.
 
-**Intellij Show Dependencies**
+
+### Intellij Show Dependencies
 
 Maven Projects에 다이어그램 형태(Show Dependencies)로 보는 기능이 있긴 하지만
 의존하는 라이브러리가 늘어날수록 속도가 느려지고 보기도 매우 힘듭니다.
@@ -15,14 +15,14 @@ Maven Projects에 다이어그램 형태(Show Dependencies)로 보는 기능이 
 
 ![img/mavenhelper/081446f1af5884b86f56274756ece43e](img/mavenhelper/943f93ed58e8220ffd07a8cc31d1a9b1.tmp)
 
-**mvn dependency:tree**
+### mvn dependency:tree
 
 해당 명령어를 사용하면 의존하는 라이브러리에 대한 정보를 볼 수 있지만 TEXT
 형태라서 직관적이지 않습니다. (**pass...**)
 
 ![img/mavenhelper/f15722a3cdd6a9f69440c341dc1702cc](img/mavenhelper/319042ab7996db3921b8f560d6feb399.tmp)
 
-**Maven Helper Plugin **
+### Maven Helper Plugin
 ------------------------
 
 Intellij의 Maven 의존 라이브러리 관리 플러그인 중 가장 다운로드 수가 많고 별점도
@@ -70,28 +70,19 @@ Text는 기존 pom.xml 창과 동일하며 **Dependency Analyzer**에서 실제�
 라이브러리 제외됩니다.
 
 **pom.xml**
-
-\<dependency\>
-
-\<groupId\>net.logstash.logback\</groupId\>
-
-\<artifactId\>logstash-logback-encoder\</artifactId\>
-
-\<version\>4.6\</version\>
-
-\<exclusions\>
-
-\<exclusion\>
-
-\<artifactId\>logback-core\</artifactId\>
-
-\<groupId\>ch.qos.logback\</groupId\>
-
-\</exclusion\>
-
-\</exclusions\>
-
-\</dependency\>
+``` xml
+<dependency>
+   <groupId>net.logstash.logback</groupId>
+   <artifactId>logstash-logback-encoder</artifactId>
+   <version>4.6</version>
+   <exclusions>
+      <exclusion>
+         <artifactId>logback-core</artifactId>
+         <groupId>ch.qos.logback</groupId>
+      </exclusion>
+   </exclusions>
+</dependency>
+```
 
 한 가지 단점으로는 Plugin 화면이 자동으로 **Refresh**가 되지 않기 때문에
 수동으로 처리해야 됩니다.
