@@ -6,6 +6,7 @@
 그래서 **Intellij**에서도 좀 더 편하게 라이브러리들을 관리하는 방법이 없을까
 해서 찾아보았습니다.
 
+</br>
 
 ### Intellij Show Dependencies
 
@@ -22,9 +23,7 @@ Maven Projects에 다이어그램 형태(Show Dependencies)로 보는 기능이 
 
 ![img/mavenhelper/f15722a3cdd6a9f69440c341dc1702cc](img/mavenhelper/319042ab7996db3921b8f560d6feb399.tmp)
 
-### Maven Helper Plugin
-------------------------
-
+## Maven Helper Plugin
 Intellij의 Maven 의존 라이브러리 관리 플러그인 중 가장 다운로드 수가 많고 별점도
 높으며 업데이트 최근까지 진행되고 있습니다. (**good**)
 
@@ -32,7 +31,9 @@ Intellij의 Maven 의존 라이브러리 관리 플러그인 중 가장 다운�
 
 ![img/mavenhelper/7121202b4391b783231f05bf6472f75d](img/mavenhelper/a6d288f618883b9123e581fab9ed4c51.tmp)
 
-**1) 설 치**
+<br/>
+
+#### 1) 설 치
 
 인터넷 망인 경우 Intellij의 **File \> Settings \> Plugins \> Browse
 Repositories**에서 **Maven Helper** 검색 후 설치하시면 됩니다.
@@ -46,7 +47,9 @@ Repositories**에서 **Maven Helper** 검색 후 설치하시면 됩니다.
 
 ![img/mavenhelper/b0be9512565690b4f9a7897c0dada2c6](img/mavenhelper/122f879b714edcc6ff5bf3377f287117.tmp)
 
-**2) 실 행**
+<br/>
+
+#### 2) 실 행
 
 실행은 매우 간단합니다. 해당 Plugin을 설치 후(재시작) Intellij에서 pom.xml 을
 클릭하면 **Text** / **Dependency Analyzer** 두 가지 탭이 생기는데
@@ -56,7 +59,9 @@ Text는 기존 pom.xml 창과 동일하며 **Dependency Analyzer**에서 실제�
 
 ![img/mavenhelper/81c4f3831617494c35bad39a7f2681bc](img/mavenhelper/08a150dc74b4d440387469077c0780f3.tmp)
 
-**3) 기 능**
+<br/>
+
+#### 3) 기 능
 
 검색 및 여러 관점으로(Conflicts, List, Tree) 의존하고 있는 라이브러리들을 확인할
 수 있으며 충돌 나는 라이브러리 대해서 직접 **Exclude** 시킬 수 있습니다.
@@ -89,7 +94,9 @@ Text는 기존 pom.xml 창과 동일하며 **Dependency Analyzer**에서 실제�
 
 ![img/mavenhelper/71f7a0c0b5cf9ca33bc339af5e2fcb54](img/mavenhelper/b56fd7667d81c2626ecfdf65737f925b.tmp)
 
-**4) 사용사례**
+<br/>
+
+#### 4) 사용사례
 
 logback에 kafka appender를 추가 후, 기동을 하다가 다음과
 같이 **NoClassDefFoundError**  에러가 발생했습니다.
@@ -105,9 +112,9 @@ Maven Helper Plugin을 통해 충돌된 라이브러리의 패키지를 검색�
 
 **logback-core 1.1.3**을 참조하고 있었기 때문에 기존에 사용하고 있던 1.1.7
 버전에서 1.1.3으로 변경되면서 충돌이 발생했습니다.
+우선순위 참고) <https://blog.sapzil.org/2018/01/21/taming-maven-transitive-dependencies>
 
-우선순위
-참고) [https://blog.sapzil.org/2018/01/21/taming-maven-transitive-dependencies](https://blog.sapzil.org/2018/01/21/taming-maven-transitive-dependencies/)
+</br>
 
 충돌이 나는 **logback-core 1.1.3** 버전에 대해서 **Exclude** 시켰고 이후
 정상적으로 기동되었습니다.
