@@ -126,6 +126,4 @@ Maven Helper Plugin을 통해 충돌된 라이브러리의 패키지를 검색�
 
 저처럼 라이브러리 충돌 때문에 고생하시는 분들이 있을까 해서 정리해 보았습니다.
 
-혹시 더 좋은 방법이 있으면 공유 부탁드립니다.
-
 참고) <https://plugins.jetbrains.com/plugin/7179-maven-helper>
