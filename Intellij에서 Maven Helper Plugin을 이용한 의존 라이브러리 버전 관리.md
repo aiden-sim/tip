@@ -41,7 +41,7 @@ Repositories**에서 **Maven Helper** 검색 후 설치하시면 됩니다.
 ![img/mavenhelper/69083366c14fb921acd6e236259d1bdb](img/mavenhelper/03c5028b1dc579ecd092679a1b1f2ca6.tmp)
 
 사내 망인 경우 Intellij Version에 맞는 Plugin을 다운로드한 후 **File \> Settings
-\> Plugins \> Install plugin from disk**로** **수동 설치하시면 됩니다.
+\> Plugins \> Install plugin from disk**로** 수동 설치하시면 됩니다.
 
 **다운로드**) <https://plugins.jetbrains.com/plugin/7179-maven-helper/versions>
 
