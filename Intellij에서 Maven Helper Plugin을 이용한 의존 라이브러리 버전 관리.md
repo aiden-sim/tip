@@ -30,14 +30,14 @@ Intellij의 Maven 의존 라이브러리 관리 플러그인 중 가장 다운�
 
 몇 가지 비슷한 Plugin을 테스트해보았는데 개인적으로는 가장 좋았습니다.
 
-![img/mavenhelper/7121202b4391b783231f05bf6472f75d](media/a6d288f618883b9123e581fab9ed4c51.tmp)
+![img/mavenhelper/7121202b4391b783231f05bf6472f75d](img/mavenhelper/a6d288f618883b9123e581fab9ed4c51.tmp)
 
 **1) 설 치**
 
 인터넷 망인 경우 Intellij의 **File \> Settings \> Plugins \> Browse
 Repositories**에서 **Maven Helper** 검색 후 설치하시면 됩니다.
 
-![img/mavenhelper/69083366c14fb921acd6e236259d1bdb](media/03c5028b1dc579ecd092679a1b1f2ca6.tmp)
+![img/mavenhelper/69083366c14fb921acd6e236259d1bdb](img/mavenhelper/03c5028b1dc579ecd092679a1b1f2ca6.tmp)
 
 사내 망인 경우 Intellij Version에 맞는 Plugin을 다운로드한 후 **File \> Settings
 \> Plugins \> Install plugin from disk**로** **수동 설치하시면 됩니다.
