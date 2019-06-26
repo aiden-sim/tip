@@ -20,7 +20,7 @@ sbt는 기본적으로 여러곳의 repository에 접근해서 필요한 라이�
 
 NEXUS를 통해 해당 주소를 접근하기 위해서는 외부 레파지토리로 미리 등록해 줘야합니다.
 ![img/sbt/187a0a515dafcd4c72b4e47dc5082d2f](img/sbt/6c777d7e9b830b1155d1ef107da8d24c.tmp)
-#참고)
+**\#참고)**
 
 <http://www.bench87.com/content/7>
 
@@ -129,7 +129,7 @@ Tasks에 프로젝트에 맞는 기동 스크립트를 설정 후, 프로젝트 
 
 **- project http :** project 내에 http 프로젝트
 
-**- \~re-start : 기동 스크립트
+**- \~re-start :** 기동 스크립트
 ![img/sbt/77ca6d06a75826d0d4b4183132f85aa8](img/sbt/3d34cee3277b1415d58c35c26de04a1c.tmp)
 
 </br>
@@ -140,6 +140,6 @@ Tasks에 프로젝트에 맞는 기동 스크립트를 설정 후, 프로젝트 
 사내 로컬인 경우, SSL/TLS 관련 신뢰 할 수 없는 사이트일 경우 sbt update 하다가 인증서 관련 에러가 나기도 합니다.
 하위 인증 관련 부분 참고하시면 됩니다.
 
-\#참고)
+**\#참고)**
 
 <https://groups.google.com/forum/#!topic/pinpoint_user/8nyymde8XSo>
