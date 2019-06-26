@@ -14,12 +14,13 @@ sbt는 기본적으로 여러곳의 repository에 접근해서 필요한 라이�
 
 **-scala-plugin** : sbt에서 관리하는 scala 라이브러리
 
-![img/sbt/8ef3ff58116711636570dd39ec6f0348](img/sbt/736dbbe70ecd6cab0731beea95ad414a.tmp)
+![img/sbt/eb81da32a4d516d643585cfb7c2a5f58](img/sbt/eb81da32a4d516d643585cfb7c2a5f58.png)
 
 </br>
 
 NEXUS를 통해 해당 주소를 접근하기 위해서는 외부 레파지토리로 미리 등록해 줘야합니다.
-![img/sbt/187a0a515dafcd4c72b4e47dc5082d2f](img/sbt/6c777d7e9b830b1155d1ef107da8d24c.tmp)
+![img/sbt/ad35a1a2f3b31de5bd540e3239c1ba70](img/sbt/ad35a1a2f3b31de5bd540e3239c1ba70.png)
+
 **\#참고)**
 
 <http://www.bench87.com/content/7>
