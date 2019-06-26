@@ -74,8 +74,6 @@ repositories에 매크로를 설정해서 관련 파일 포멧을 설정할 수 
 #### Default
 저장소 뒤에 매크로가 없으면 maven 기본 형태로 라이브러리를 찾아오는것 같습니다.
 
-</br>
-
 ex) addSbtPlugin("org.flywaydb" % "flyway-sbt" % "4.1.2")
 ``` config
 https://flywaydb.org/repo/ + org/flywaydb/flyway-sbt_2.10_0.13/4.1.2/flyway-sbt-4.1.2.pom
@@ -122,7 +120,7 @@ Run \> Edit Configurations 를 실행 시킵니다.
 </br>
 
 #### 3-2) Task 등록
-Tasks에 프로젝트에 맞는 기동 스크립트를 설정 후, 프로젝트 구동 시켜 주시면 됩니다.
+Tasks에 프로젝트에 맞는 기동 스크립트를 설정 후, 구동 시켜 주시면 됩니다.
 ``` config
 "project http" "~re-start" 
 ``` 
@@ -138,6 +136,7 @@ Tasks에 프로젝트에 맞는 기동 스크립트를 설정 후, 프로젝트 
 #### 4-1)  PKIX path building failed..
 
 사내 로컬인 경우, SSL/TLS 관련 신뢰 할 수 없는 사이트일 경우 sbt update 하다가 인증서 관련 에러가 나기도 합니다.
+
 하위 인증 관련 부분 참고하시면 됩니다.
 
 **\#참고)**
