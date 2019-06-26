@@ -3,9 +3,8 @@
 
 ### SBT란?
 sbt는 자바의 maven과 비슷한 일을 하는 빌드툴입니다.
-sbt는 기본적으로 여러곳의 repository에 접근해서 필요한 라이브러리들을 가지고 옵니다.
 
-</br>
+sbt는 기본적으로 여러곳의 repository에 접근해서 필요한 라이브러리들을 가지고 옵니다.
 
 **-local :** local 레파지토리
 
@@ -21,7 +20,6 @@ sbt는 기본적으로 여러곳의 repository에 접근해서 필요한 라이�
 
 NEXUS를 통해 해당 주소를 접근하기 위해서는 외부 레파지토리로 미리 등록해 줘야합니다.
 ![img/sbt/187a0a515dafcd4c72b4e47dc5082d2f](img/sbt/6c777d7e9b830b1155d1ef107da8d24c.tmp)
-
 #참고)
 
 <http://www.bench87.com/content/7>
@@ -30,7 +28,7 @@ NEXUS를 통해 해당 주소를 접근하기 위해서는 외부 레파지토�
 
 </br>
 
-### 1) SBT NEXUS Repository 설정**
+### 1) SBT NEXUS Repository 설정
 SBT 관련 NEXUS를 사용하려면 maven에서 .m2/settings.xml에 NEXUS local repository 를 설정하는것 처럼 설정 파일을 추가해 주어야 합니다.
 
 </br>
@@ -73,7 +71,7 @@ repositories에 매크로를 설정해서 관련 파일 포멧을 설정할 수 
 
 </br>
 
-**Default**
+#### Default
 저장소 뒤에 매크로가 없으면 maven 기본 형태로 라이브러리를 찾아오는것 같습니다.
 
 </br>
@@ -89,7 +87,7 @@ https://flywaydb.org/repo/ + org/flywaydb/flyway-sbt_2.10_0.13/4.1.2/flyway-sbt-
 
 </br>
 
-**ivy**
+#### ivy
 ivy 관련 레파지토리 관련 매크로는 다음과 같습니다.
 ``` config
 [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
@@ -110,6 +108,7 @@ http://dl.bintray.com/sbt/sbt-plugin-releases/ + com.typesafe.play/sbt-plugin/sc
 
 ### 2) SBT 라이브러리 관련 동기화
 ![img/sbt/afa870bd637155dd150b5e102cfdb9c2](img/sbt/9f52d42df65bacea75e50195bee48574.tmp)
+
 SBT내에 NEXUS 설정이 끝났으면 **sbt update** 명령어를 이용해서 관련 라이브러리를 동기화 시킵니다.
 
 </br>
@@ -117,6 +116,7 @@ SBT내에 NEXUS 설정이 끝났으면 **sbt update** 명령어를 이용해서 
 ### 3) 구동
 #### 3-1) 경로
 Run \> Edit Configurations 를 실행 시킵니다.
+
 ![img/sbt/2eeac3e8b212cc2c908c9f5b33d1ccff](img/sbt/e9ee2d3242b496f9944eb2ff1c398c26.tmp)
 
 </br>
@@ -129,7 +129,7 @@ Tasks에 프로젝트에 맞는 기동 스크립트를 설정 후, 프로젝트 
 
 **- project http :** project 내에 http 프로젝트
 
-**- \~re-start :** build.sbt 내에 **mainClass in reStart := Some("net.meshkorea.solution.tms.http.Boot")** 를 실행
+**- \~re-start : 기동 스크립트
 ![img/sbt/77ca6d06a75826d0d4b4183132f85aa8](img/sbt/3d34cee3277b1415d58c35c26de04a1c.tmp)
 
 </br>
