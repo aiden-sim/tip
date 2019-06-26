@@ -6,6 +6,8 @@ IDE에서 Code generation을 사용하면 Getter, Setter, 생성자를 자동으
 
 롬복의 단점으로는 IDE에 별도 플러그인 설치가 필요하고, 간단하게 애노테이션 형태로 사용할 수 있기 때문에 객체 생성 시, 실수할 소지가 있다고 생각됩니다.
 
+</br>
+
 #### 1) \@AllArgsConstructor, \@RequiredArgsConstructor
 
 AllArgsConstructor는 전체 필드의 생성자를 RequiredArgsConstructor는 final이나 \@NonNull인 필드 대상으로 생성자를 만들어 줍니다.
@@ -27,9 +29,8 @@ public class User {
 }
 
 User user = new User("simjunbo", "01088253765", "심준보");
-```
-
 결과 : User(driverId=simjunbo, mobileNo=01088253765, driverName=심준보)
+```
 
 </br>
 
@@ -44,10 +45,8 @@ public class User {
 }
 
 User user = new User("simjunbo", "01088253765", "심준보");
+결과 : User(mobileNo=simjunbo, driverId=01088253765, driverName=심준보) // mobileNo와 driverId의 값이 변경 됨
 ```
-
-결과 : User(mobileNo=simjunbo, driverId=01088253765, driverName=심준보) //
-mobileNo와 driverId의 값이 변경 됨
 
 </br>
 
@@ -129,6 +128,8 @@ public class User {
 }
 ``` 
 
+</br>
+
 생성자를 직접 만들어서 \@Builder를 사용하면 필드 순서 변경에 따른 이슈도 사라지고, 외부에 노출이 필요한 필드를 직접 제어할 수 있게 됩니다.
 
 #### 변경 후
@@ -154,7 +155,7 @@ driverId는 자동으로 생성되기 때문에 외부에 노출시키지 않았
 
 </br>
 
-#### 4) \@NoArgsConstructor**
+#### 4) \@NoArgsConstructor
 
 JPA를 사용할 때, 프록시 생성을 위해 기본 생성자가 필요하다고 합니다. 
 기본 생성자가 없으면 아래와 같이 No default constructor for entity 메시지가 출력됩니다.
@@ -167,6 +168,8 @@ at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccess
 at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
 . . .
 ```
+
+</br>
 
 다음과 같이 \@NoArgsConstrucotr 접근 권한을 PROTECTED로 해서 외부에서 생성자를 통해 불필요한 객체를 생성할 수 없도록 처리할 수 있습니다.
 
@@ -188,12 +191,16 @@ public class Auth {
 }
 ```
 
+</br>
+
 #### 5) \@Setter
 Setter는 객체를 mutable 하게 만들기 때문에 가급적 지양하려고 하지만,
 DTO 같은 경우 자동으로 파싱 해주는 라이브러리에 따라서 Setter가 있어야 데이터가주입되는 경우가 있습니다.
 그래서 여러 프로젝트에서 사용되는 DTO인 경우 Setter를 유지하려고 합니다.
 
 해당 방법이 꼭 정답이라고 할 수는 없지만, 롬복 사용 시 고민해 볼 필요는 있을 것 같습니다.
+
+</br>
 
 참고)
 
