@@ -118,7 +118,7 @@ HTTP 서비스 같은 경우 **Controller, RestController** 등의 클래스들�
 
 xlog가 정상 노출되면, 비동기 스레드를 추적하기 위해 **hook_async_callrunnable_scan_package_prefixes** 옵션을 이용하면 됩니다.
 
-**hook_async_callrunnable_scan_package_prefixes ** 에는 runnable, callable의 구현 패키지를 등록해 주시면 됩니다.
+**hook_async_callrunnable_scan_package_prefixes** 에는 runnable, callable의 구현 패키지를 등록해 주시면 됩니다.
 
 패키지가 여러 개인 경우 콤마(,)로 구분됩니다.
 
@@ -273,6 +273,7 @@ hook_async_thread_pool_executor_enabled=true               // 필수 선언 (기
 </br>
 
 **결 과**
+
 ![2dd4afd43188eda365e2713fa79bba28](img/scouter/1af0f0fafaa06458ae37bcf741650c2f.png)
 
 **hook_async_callrunnable_scan_package_prefixes** 을 이용해서 직접 패키지를 등록하거나
@@ -341,7 +342,7 @@ HTTP 서비스 애플리케이션은 **Controller, RestController** 등의 클�
 
 </br>
 
-#### 2-1) \@Async annotation**
+#### 2-1) \@Async annotation
 
 **\@Async**
 ``` java
@@ -350,6 +351,8 @@ public void asyncProcess(String uuid, EngineRequest engineRequest) {
    process(uuid, engineRequest);
 }
 ``` 
+
+</br>
 
 **scouter.conf**
 ``` config
@@ -410,6 +413,7 @@ hook_async_callrunnable_scan_package_prefixes=runnable
 </br>
 
 **결 과**
+
 ![27a177ea7b8b7d04f5f0b18fbe3d25a8](img/scouter/0f1961271449fe06c09a64e000a27217.png)
 
 람다로 구현된 비동기 스레드는 **hook_async_callrunnable_scan_package_prefixes**을 사용해도 추적 되지 않았습니다.
@@ -484,11 +488,13 @@ hook_service_patterns=runnable.RunnableLambdaExpression.main, worker.Worker.run
 **결 과**
 
 **\#메인 스레드**
+
 ![8cd1b75ebf79299b2116de511b503e0e](img/scouter/f49af39e9011696677671e7c2ec89c76.png)
 
 </br>
 
 **\#비동기 스레드**
+
 ![752824abd4d3b4d1970c160fcbb94220](img/scouter/a57eb135adaa62e8975044296f4e36be.png)
 
 </br>
@@ -547,8 +553,8 @@ hook_service_patterns=executor.ExecutorServiceClass.main    // HTTP 서비스 �
 **hook_method_patterns** 옵션을 사용하면 특정 메서드 정보를 추가할 수 있습니다. 단 해당 메서드를 호출하는 스레드의 시작점이 xlog 상에 노출되고 있어야 합니다.
 
 pattern 설정 방법으로 다음과 같습니다. 여러 개인 경우 콤마(,)로 구분됩니다.
-``` config
 **hook_method_patterns**
+``` config
 hook_method_patterns =
 # com.sc.*.* : com.sc. 으로 시작하는 패키지내의 모든 class의 모든 method
 # com.sc.order.Order.* : com.sc.order.Order class의 모든 method
@@ -560,6 +566,7 @@ hook_method_patterns =
 </br>
 
 **결 과**
+
 ![a066eb6093ad5d8f2cc1b921c50381fd](img/scouter/103998ae3a6056bb79caf910a748d35b.png)
 
 설정 후에도 xlog에 정보가 보이지 않는다면 접근 제한자 옵션을 확인해 보시기 바랍니다.
@@ -609,6 +616,8 @@ xlog_discard_service_patterns=/__healthCheck
 
 ![84b8dbe04f93b14fc9aab3b8c48aab59](img/scouter/91146860b9e24a67b6073d385b12434b.png)
 
+</br>
+
 Scouter Agent 프로젝트에서 **remote**를 추가 후, 동일 포트로 접근해서 원격 디버깅해볼 수 있습니다.
 
 **주의점**은 사용하고 있는 Agent 버전과 소스코드 버전이 동일해야 됩니다.
@@ -625,4 +634,4 @@ Scouter Agent 프로젝트에서 **remote**를 추가 후, 동일 포트로 접�
 
 그리고 내부적으로 정책이 있다면 정책에 맞는 한도 내에서 사용하는 것이 좋을 것같습니다.
 
-예제 : https://github.com/simjunbo/scouter_playground
+예제) https://github.com/simjunbo/scouter_playground
