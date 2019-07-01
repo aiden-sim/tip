@@ -436,6 +436,7 @@ boolean hook_lambda_instrumentation_strategy_enabled=false (Default=false)
 결론은 **'람다 방식으로 생성된 비동기 스레드는 추적할 수 없다'** 입니다.
 
 **SpringCamp2017[비동기 어플리케이션, 어떻게 모니터링 할 것인가?]** 의 후반부를 보시면 왜 람다가 왜  hooking 하기 어려운지 나옵니다. 관심 있으 신분은 참고하시기 바랍니다.
+
 참고) <https://www.youtube.com/watch?v=dc54SR4Wdb4> (30분 50초)
 
 </br>
@@ -608,6 +609,8 @@ xlog_discard_service_patterns=/__healthCheck
 오픈소스의 장점 중 하나는 직접 구현을 확인해 볼 수 있습니다. 프로파일링을정상적으로 한 것 같은데 xlog에 출력되지 않는다면 디버깅을 통해서 간단하게 (?) 확인해 볼 수 있습니다.
 
 디버깅 대상 애플리케이션 **jvm option**에 다음과 같이 추가합니다.
+
+</br>
 
 **대상 프로젝트 JVM options**
 ``` config
