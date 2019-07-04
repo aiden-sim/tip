@@ -6,7 +6,9 @@
 </br>
 
 #### pom.xml
-pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리가 꼭 추가되어 있어야 합니다. 해당 라이브러리가 정상적으로 추가되지 않으면 kafka로 전송이 되지 않을 뿐만 아니라 별도의 에러가 나지 않아서 원인을 찾기도 쉽지 않습니다.
+pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리가 꼭 추가되어 있어야 합니다. 
+
+해당 라이브러리가 정상적으로 추가되지 않으면 kafka로 전송이 되지 않을 뿐만 아니라 별도의 에러가 나지 않아서 원인을 찾기도 쉽지 않습니다.
 
 ``` xml
 <!-- kafka -->
