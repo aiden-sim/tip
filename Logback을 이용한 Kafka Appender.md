@@ -1,13 +1,12 @@
 ## Logback을 이용한 Kafka Appender
 
-### 1) logback과 연동
-
+#### 1) logback과 연동
 프로젝트의 logback Appender를 통해서 Kafka Broker에 데이터를 전송할 수 있습니다.
 
+</br>
 
 #### pom.xml
-
-pom.xml에 logback-kafka-appender,  logstash-logback-encoder 라이브러리가 꼭 추가되어 있어야 합니다. 해당 라이브러리가 정상적으로 추가되지 않으면 kafka로 전송이 되지 않을 뿐만 아니라
+pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리가 꼭 추가되어 있어야 합니다. 해당 라이브러리가 정상적으로 추가되지 않으면 kafka로 전송이 되지 않을 뿐만 아니라
 
 별도의 에러가 나지 않아서 원인을 찾기도 쉽지 않습니다.
 
@@ -35,7 +34,7 @@ pom.xml에 logback-kafka-appender,  logstash-logback-encoder 라이브러리가 
 
 </br>
 
-logstash-logback-encoder 라이브러리 내부에서 logback-core를 사용하고 있기 때문에 버전 충돌이 날 수도 있습니다.
+**logstash-logback-encoder** 라이브러리 내부에서 **logback-core**를 사용하고 있기 때문에 버전 충돌이 날 수도 있습니다.
 
 Intellij에서 Maven Helper Plugin을 이용한 의존 라이브러리 버전 관리 를 참고하면 의존 라이브러리를 손쉽게 관리할 수 있습니다.
 
@@ -43,7 +42,7 @@ Intellij에서 Maven Helper Plugin을 이용한 의존 라이브러리 버전 �
 </br>
 
 #### logback.xml
-logback-kafka-appender,  logstash-logback-encoder  라이브러리 추가 후 관련 설정을 logback에 추가해 줍니다.
+**logback-kafka-appender,  logstash-logback-encoder**  라이브러리 추가 후 관련 설정을 logback에 추가해 줍니다.
 
 ``` xml
 <property name="APPENDER_KEY" value="tomcat"/>
@@ -112,6 +111,8 @@ customFields 태그를 사용하면 json에 특정 데이터 추가 가능
 --bootstrap-server localhost:9092 \
 --topic log-tomcat --from-beginning
 ```
+
+</br>
 
 kafka에 저장된 json format 데이터는 다음과 같고, layout을 LogstashLayout으로 사용하면 됩니다. 
 
