@@ -84,8 +84,6 @@ pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리
 
 주요 정보로는 다음과 같습니다.
 
-</br>
-
 |태 그|설 명|
 |------|---|
 |\<producerConfig\>bootstrap.servers=localhost:9092\<\/producerConfig\>|데이터를 전송할 kafka broker (여러개 인경우 콤마(,)로 구분)|
@@ -99,6 +97,7 @@ pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리
 #### 2) kafka 데이터 확인
 
 실제 request를 발생 시켜서 logback을 통해 kafka에 정상적으로 저장되었는지 확인해보면 됩니다.
+
 쓸만한 GUI 툴이 없어서 kafka에서 제공해 주는 명령어를 사용했습니다.
 
 ``` config
@@ -111,7 +110,7 @@ pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리
 
 kafka에 저장된 json format 데이터는 다음과 같고, layout을 **LogstashLayout**으로 사용하면 됩니다. 
 
-**customFields**로 추가된 key, type, source 등이 같이 추가된 것을 확인하 수 있습니다.
+**customFields**로 추가된 key, type, source 등이 같이 추가된 것을 확인할 수 있습니다.
 #### json
 ``` json
 {
