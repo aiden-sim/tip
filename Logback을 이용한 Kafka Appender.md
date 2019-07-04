@@ -109,12 +109,9 @@ pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리
 
 </br>
 
-kafka에 저장된 json format 데이터는 다음과 같고, layout을 LogstashLayout으로 사용하면 됩니다. 
+kafka에 저장된 json format 데이터는 다음과 같고, layout을 **LogstashLayout**으로 사용하면 됩니다. 
 
-customFields로 추가된 key, type, source 등이 같이 추가된 것을 확인하 수 있습니다.
-
-</br>
-
+**customFields**로 추가된 key, type, source 등이 같이 추가된 것을 확인하 수 있습니다.
 #### json
 ``` json
 {
