@@ -6,9 +6,7 @@
 </br>
 
 #### pom.xml
-pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리가 꼭 추가되어 있어야 합니다. 해당 라이브러리가 정상적으로 추가되지 않으면 kafka로 전송이 되지 않을 뿐만 아니라
-
-별도의 에러가 나지 않아서 원인을 찾기도 쉽지 않습니다.
+pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리가 꼭 추가되어 있어야 합니다. 해당 라이브러리가 정상적으로 추가되지 않으면 kafka로 전송이 되지 않을 뿐만 아니라 별도의 에러가 나지 않아서 원인을 찾기도 쉽지 않습니다.
 
 ``` xml
 <!-- kafka -->
@@ -36,7 +34,7 @@ pom.xml에 **logback-kafka-appender,  logstash-logback-encoder** 라이브러리
 
 **logstash-logback-encoder** 라이브러리 내부에서 **logback-core**를 사용하고 있기 때문에 버전 충돌이 날 수도 있습니다.
 
-Intellij에서 Maven Helper Plugin을 이용한 의존 라이브러리 버전 관리 를 참고하면 의존 라이브러리를 손쉽게 관리할 수 있습니다.
+[Intellij에서 Maven Helper Plugin을 이용한 의존 라이브러리 버전 관리 ](https://github.com/simjunbo/tip/blob/master/Intellij%EC%97%90%EC%84%9C%20Maven%20Helper%20Plugin%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%9D%98%EC%A1%B4%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%20%EB%B2%84%EC%A0%84%20%EA%B4%80%EB%A6%AC.md)를 참고하면 의존 라이브러리를 손쉽게 관리할 수 있습니다.
 
 
 </br>
@@ -86,19 +84,16 @@ Intellij에서 Maven Helper Plugin을 이용한 의존 라이브러리 버전 �
 
 주요 정보로는 다음과 같습니다.
 
-<producerConfig>bootstrap.servers=localhost:9092</producerConfig>
-데이터를 전송할 kafka broker (여러개 인경우 콤마(,)로 구분)
+</br>
 
-<topic>log-tomcat</topic>
-데이터를 전송할 topic
-<layout class="net.logstash.logback.layout.LogstashLayout">	Logstash의 json format 으로 메시지 출력
-<layout class="net.logstash.logback.layout.LogstashLayout">
-<customFields></customFields>
-</layout>
-
-customFields 태그를 사용하면 json에 특정 데이터 추가 가능
-<layout class="ch.qos.logback.classic.PatternLayout">	text format 으로 메시지 출력
-
+|태 그|설 명|
+|------|---|
+|\<producerConfig\>bootstrap.servers=localhost:9092\<\/producerConfig\>|데이터를 전송할 kafka broker (여러개 인경우 콤마(,)로 구분)|
+|\<topic\>log-tomcat\<\/topic\>|데이터를 전송할 topic|
+|\<layout class="net.logstash.logback.layout.LogstashLayout"\>|Logstash의 json format 으로 메시지 출력|
+|\<customFields\>\<\/customFields\>|customFields 태그를 사용하면 json에 특정 데이터 추가 가능|
+|\<layout class="ch.qos.logback.classic.PatternLayout"\>|text format 으로 메시지 출력|
+   
 </br>
 
 #### 2) kafka 데이터 확인
@@ -140,10 +135,9 @@ customFields로 추가된 key, type, source 등이 같이 추가된 것을 확�
 }
 ``` 
 
-kafka에 저장된 text format (사용자가 지정한 패턴) 데이터는 다음과 같고, layout을 PatterLayout으로 사용하면 됩니다.
-
 </br>
 
+kafka에 저장된 text format (사용자가 지정한 패턴) 데이터는 다음과 같고, layout을 PatterLayout으로 사용하면 됩니다.
 #### text
 ``` 
 [2019-06-04 17:50:28][[404][GET][http://localhost:8080/][0:0:0:0:0:0:0:1][][accept-language={ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7}&cookie={SCOUTER=z3l276556f6qo0; Idea-8ec0b4c3=f7759d29-a224-42b0-8d0f-e11a3f6ef968}&host={localhost:8080}&upgrade-insecure-requests={1}&connection={keep-alive}&accept-encoding={gzip, deflate, br}&user-agent={Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36}&accept={text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3}][][19][{"httpStatus":"NOT_FOUND","exceptionMessage":"Api is not found","exception":"com.sjb.exception.ApiException","httpCode":404}] ]
