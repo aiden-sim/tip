@@ -84,6 +84,7 @@ redis에 데이터가 List 형태로 쌓이기 때문에 **[GET KEY]** 형태로
 **[LRANGE KEY START STOP]** 형태로 범위로 조회 해야 합니다.
 
 저는 logback에 key를 tomcat으로 설정했기 때문에 **LRANGE tomcat 0 3** 으로 조회를 했고 정상적으로 데이터가 들어간 것을 확인했습니다.
+
 ![image2018-10-26_17-42-7](https://user-images.githubusercontent.com/7076334/60695976-c1c10b00-9f1e-11e9-9768-7131357960a0.png)
 
 </br>
@@ -93,7 +94,7 @@ redis에 저장된 데이터 형태는 대략 다음과 같고 source, type 같�
 ``` json
 {
   "source": "local",
-  "host": "TMON-SIMJUNBO",
+  "host": "SIMJUNBO",
   "path": null,
   "type": "tmsengine",
   "tags": [],
