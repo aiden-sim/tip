@@ -43,7 +43,7 @@ pom.xml에 **logback-redis-appender** 라이브러리가 꼭 추가되어 있어
     <appender-ref ref="FILE"/>
     <appender-ref ref="redis-logstash"/>
 </logger>
-<logger name="com.tmoncorp.tms" level="DEBUG" additivity="false">
+<logger name="com.sjb.tms" level="DEBUG" additivity="false">
     <appender-ref ref="console"/>
     <appender-ref ref="FILE"/>
     <appender-ref ref="redis-logstash"/>
