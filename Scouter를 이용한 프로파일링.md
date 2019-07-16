@@ -367,7 +367,7 @@ hook_spring_async_enabled=true  // 생략 가능
 
 **\@Async** 관련 코드들도 Scouter Agent에 등록되어 있기 때문에 별도의 프로파일링이 필요 없습니다.
 
-**hook_spring_async_enabled  **옵션으로 사용 유/무를 지정할 수 있습니다.
+**hook_spring_async_enabled** 옵션으로 사용 유/무를 지정할 수 있습니다.
 
 </br>
 
