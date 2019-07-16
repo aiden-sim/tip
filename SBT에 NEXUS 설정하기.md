@@ -67,7 +67,7 @@ typesafe-ivy-repo : http://NEXUS주소:8080/nexus/content/repositories/typesafe-
 
 </br>
 
-### 1-3) 매크로 체계
+#### 1-3) 매크로 체계
 repositories에 매크로를 설정해서 관련 파일 포멧을 설정할 수 있습니다.
 
 </br>
