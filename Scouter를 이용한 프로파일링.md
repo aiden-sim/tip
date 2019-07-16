@@ -213,7 +213,6 @@ public class RunnableAnonymousClass {
 hook_async_callrunnable_enabled=true                        // 생략 가능
 hook_service_patterns=runnable.RunnableAnonymousClass.main
 hook_async_callrunnable_scan_package_prefixes=runnable      // Runnable이 구현되어 있는 패키지
-있는 패키지
 ```
 
 </br>
