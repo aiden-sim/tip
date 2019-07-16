@@ -338,7 +338,7 @@ hook_async_callrunnable_scan_package_prefixes=completablefuture
 HTTP 서비스 애플리케이션은 **Controller, RestController** 등의 클래스들을
 자동으로 추적하고 있어서
 
-**hook_service_patterns ** 에 메서드를 등록해주지 않아도 xlog에 출력됩니다.
+**hook_service_patterns** 에 메서드를 등록해주지 않아도 xlog에 출력됩니다.
 
 </br>
 
