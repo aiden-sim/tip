@@ -599,7 +599,7 @@ hook_method_access_none_enabled=false (Default=false)
 ``` config
 xlog_discard_service_patterns=/__healthCheck
 ``` 
-**xlog_discard_service_patterns**를 사용하면 특정 패턴의 url을 xlog에서 제외할 수 있습니다. 현재 물류 유닛은 Scouter에는 헬스 체크 제외를 걸어둔 상태입니다.
+**xlog_discard_service_patterns**를 사용하면 특정 패턴의 url을 xlog에서 제외할 수 있습니다.
 
 </br>
 
