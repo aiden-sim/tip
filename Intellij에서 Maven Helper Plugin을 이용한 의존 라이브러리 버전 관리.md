@@ -112,6 +112,7 @@ Maven Helper Plugin을 통해 충돌된 라이브러리의 패키지를 검색�
 
 **logback-core 1.1.3**을 참조하고 있었기 때문에 기존에 사용하고 있던 1.1.7
 버전에서 1.1.3으로 변경되면서 충돌이 발생했습니다.
+
 우선순위 참고) <https://blog.sapzil.org/2018/01/21/taming-maven-transitive-dependencies>
 
 </br>
