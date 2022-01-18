@@ -28,8 +28,8 @@ public class User {
   private String driverName;
 }
 
-User user = new User("simjunbo", "01088253765", "심준보");
-결과 : User(driverId=simjunbo, mobileNo=01088253765, driverName=심준보)
+User user = new User("simjunbo", "01011111111", "심준보");
+결과 : User(driverId=simjunbo, mobileNo=01011111111, driverName=심준보)
 ```
 
 </br>
@@ -45,7 +45,7 @@ public class User {
 }
 
 User user = new User("simjunbo", "01011111111", "심준보");
-결과 : User(mobileNo=simjunbo, driverId=01088253765, driverName=심준보) // mobileNo와 driverId의 값이 변경 됨
+결과 : User(mobileNo=simjunbo, driverId=01011111111, driverName=심준보) // mobileNo와 driverId의 값이 변경 됨
 ```
 
 </br>
