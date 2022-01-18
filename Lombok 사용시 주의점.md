@@ -44,7 +44,7 @@ public class User {
   private String driverName;
 }
 
-User user = new User("simjunbo", "01088253765", "심준보");
+User user = new User("simjunbo", "01011111111", "심준보");
 결과 : User(mobileNo=simjunbo, driverId=01088253765, driverName=심준보) // mobileNo와 driverId의 값이 변경 됨
 ```
 
@@ -83,8 +83,8 @@ mutable한 객체에서 사용하면 부작용이 생길 수 있습니다.
 생성됩니다.
 
 ``` java
-User user = new User("simjunbo", "01088253765", "심준보");
-User user2 = new User("simjunbo", "01088253765", "심준보");
+User user = new User("simjunbo", "01011111111", "심준보");
+User user2 = new User("simjunbo", "01011111111", "심준보");
 
 user.equals(user2);
 결과 : true
